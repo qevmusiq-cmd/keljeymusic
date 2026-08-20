@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Allow: /qev/
+
+Sitemap: https://keljeymusic.com/sitemap.xml

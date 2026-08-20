@@ -1,0 +1,12 @@
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)/$ /$1 [R=301,L]
+
+<FilesMatch "\.(css|js|jpg|jpeg|png|svg|ico|webp)$">
+    Header set Cache-Control "max-age=31536000, public"
+</FilesMatch>
+
+AddOutputFilterByType DEFLATE text/html text/css text/javascript application/javascript application/json
