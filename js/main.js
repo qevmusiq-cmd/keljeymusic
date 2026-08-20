@@ -48,4 +48,4 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     console.log('🎵 Keljey Music loaded successfully.');
-});
+}); Add main JavaScript
