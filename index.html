@@ -19,7 +19,7 @@
         "@context": "https://schema.org",
         "@type": "MusicGroup",
         "name": "Keljey",
-        "description": "Kenyan musical duo telling stories through music.",
+        "description": "Kenyan musical duo telling stories through rap music.",
         "member": [
             {
                 "@type": "Person",
@@ -41,16 +41,41 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Oswald:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Additional style for YouTube thumbnails */
+        .music-artwork img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .music-artwork {
+            position: relative;
+            overflow: hidden;
+        }
+        .music-artwork .play-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 3rem;
+            color: white;
+            opacity: 0.8;
+            text-shadow: 0 0 20px rgba(0,0,0,0.8);
+            transition: opacity 0.3s;
+            pointer-events: none;
+        }
+        .music-item:hover .play-overlay {
+            opacity: 1;
+        }
+    </style>
 </head>
 <body>
     <nav class="main-nav" role="navigation" aria-label="Main navigation">
         <div class="nav-container">
             <div class="nav-logo">
-    <a href="/" aria-label="Keljey Music Home">
-        <img src="assets/images/keljey-logo.jpg" alt="Keljey Music" style="height:40px;">
-    </a>
-</div>
-                    <span class="logo-placeholder">KELJEY<span class="accent">MUSIC</span></span>
+                <a href="/" aria-label="Keljey Music Home">
+                    <img src="assets/images/keljey-logo.jpg" alt="Keljey Music" style="height:40px;">
                 </a>
             </div>
             <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
@@ -128,13 +153,17 @@
                 <p class="section-subtitle">Explore the Keljey and Qev catalog</p>
             </div>
 
+            <!-- Qev Solo -->
             <div class="music-section">
                 <h3 class="music-category">Qev Solo</h3>
                 <div class="music-grid">
+
+                    <!-- HIGHLIGHT -->
                     <div class="music-item featured">
                         <div class="music-artwork">
-                            <div class="artwork-placeholder">🎵</div>
+                            <img src="https://img.youtube.com/vi/hDiC22xN50c/maxresdefault.jpg" alt="HIGHLIGHT - Qev">
                             <span class="new-badge">NEW</span>
+                            <div class="play-overlay">▶</div>
                         </div>
                         <div class="music-info">
                             <h4>HIGHLIGHT</h4>
@@ -143,9 +172,12 @@
                             <a href="https://youtu.be/hDiC22xN50c?si=8hSWCGb96acB3dKc" target="_blank" rel="noopener noreferrer" class="music-link">Watch →</a>
                         </div>
                     </div>
+
+                    <!-- ENOUGH -->
                     <div class="music-item">
                         <div class="music-artwork">
-                            <div class="artwork-placeholder">🎤</div>
+                            <img src="https://img.youtube.com/vi/WmF27F7JRmg/maxresdefault.jpg" alt="ENOUGH - Qev">
+                            <div class="play-overlay">▶</div>
                         </div>
                         <div class="music-info">
                             <h4>ENOUGH</h4>
@@ -154,9 +186,12 @@
                             <a href="https://youtu.be/WmF27F7JRmg?si=lA7NXHeOxd7rlZ6d" target="_blank" rel="noopener noreferrer" class="music-link">Watch →</a>
                         </div>
                     </div>
+
+                    <!-- NO 2MORROW -->
                     <div class="music-item">
                         <div class="music-artwork">
-                            <div class="artwork-placeholder">🎶</div>
+                            <img src="https://img.youtube.com/vi/-MJWJr7Y9s0/maxresdefault.jpg" alt="NO 2MORROW - Qev ft n-capital">
+                            <div class="play-overlay">▶</div>
                         </div>
                         <div class="music-info">
                             <h4>NO 2MORROW</h4>
@@ -164,9 +199,12 @@
                             <a href="https://youtu.be/-MJWJr7Y9s0?si=E8uwTP_WQvjxN9YJ" target="_blank" rel="noopener noreferrer" class="music-link">Watch →</a>
                         </div>
                     </div>
+
+                    <!-- KATA SIM -->
                     <div class="music-item">
                         <div class="music-artwork">
-                            <div class="artwork-placeholder">🔥</div>
+                            <img src="https://img.youtube.com/vi/oUHe5lksZMc/maxresdefault.jpg" alt="KATA SIM - Qev ft BLACKZ D3PP">
+                            <div class="play-overlay">▶</div>
                         </div>
                         <div class="music-info">
                             <h4>KATA SIM</h4>
@@ -177,24 +215,31 @@
                 </div>
             </div>
 
+            <!-- Keljey Duo -->
             <div class="music-section">
                 <h3 class="music-category">Keljey Duo</h3>
                 <div class="music-grid">
+
+                    <!-- FOR THE CRITIQUES -->
                     <div class="music-item">
                         <div class="music-artwork">
-                            <div class="artwork-placeholder">📹</div>
+                            <img src="https://img.youtube.com/vi/1_OsVxKasPo/maxresdefault.jpg" alt="FOR THE CRITIQUES - Keljey">
+                            <span class="tag" style="position:absolute;top:12px;left:12px;background:rgba(0,0,0,0.7);color:#fff;padding:2px 10px;font-size:0.55rem;border-radius:2px;">Lyrical Video</span>
+                            <div class="play-overlay">▶</div>
                         </div>
                         <div class="music-info">
                             <h4>FOR THE CRITIQUES</h4>
                             <p class="artist">Keljey</p>
-                            <span class="tag">Lyrical Video</span>
                             <a href="https://youtu.be/1_OsVxKasPo?si=8EjPUJPyHNtR114M" target="_blank" rel="noopener noreferrer" class="music-link">Watch →</a>
                         </div>
                     </div>
+
+                    <!-- MBOGI INA DOH -->
                     <div class="music-item popular">
                         <div class="music-artwork">
-                            <div class="artwork-placeholder">⭐</div>
+                            <img src="https://img.youtube.com/vi/3hCjMI9VdQI/maxresdefault.jpg" alt="MBOGI INA DOH - Keljey">
                             <span class="popular-badge">Popular</span>
+                            <div class="play-overlay">▶</div>
                         </div>
                         <div class="music-info">
                             <h4>MBOGI INA DOH</h4>
@@ -203,21 +248,27 @@
                             <a href="https://youtu.be/3hCjMI9VdQI?si=5LHUxyscHiM3NiJL" target="_blank" rel="noopener noreferrer" class="music-link">Watch →</a>
                         </div>
                     </div>
+
+                    <!-- CROSS THE LINE -->
                     <div class="music-item">
                         <div class="music-artwork">
-                            <div class="artwork-placeholder">🎬</div>
+                            <img src="https://img.youtube.com/vi/bw0OYoYA_bQ/maxresdefault.jpg" alt="CROSS THE LINE - Keljey">
+                            <span class="tag" style="position:absolute;top:12px;left:12px;background:rgba(0,0,0,0.7);color:#fff;padding:2px 10px;font-size:0.55rem;border-radius:2px;">Visualizer</span>
+                            <div class="play-overlay">▶</div>
                         </div>
                         <div class="music-info">
                             <h4>CROSS THE LINE</h4>
                             <p class="artist">Keljey</p>
-                            <span class="tag">Music Visualizer</span>
                             <a href="https://youtu.be/bw0OYoYA_bQ?si=kWFAwG7ierNy4Oat" target="_blank" rel="noopener noreferrer" class="music-link">Watch →</a>
                         </div>
                     </div>
+
+                    <!-- MARY JANE -->
                     <div class="music-item historic">
                         <div class="music-artwork">
-                            <div class="artwork-placeholder">🌿</div>
+                            <img src="https://img.youtube.com/vi/AHFCEgtGrIw/maxresdefault.jpg" alt="MARY JANE - Keljey ft jordan">
                             <span class="historic-badge">First Release</span>
+                            <div class="play-overlay">▶</div>
                         </div>
                         <div class="music-info">
                             <h4>MARY JANE</h4>
@@ -229,31 +280,56 @@
                 </div>
             </div>
 
+            <!-- Keljey Collaborations -->
             <div class="music-section">
                 <h3 class="music-category">Keljey Collaborations</h3>
                 <div class="music-grid">
+
+                    <!-- THESE DAYS -->
                     <div class="music-item">
+                        <div class="music-artwork">
+                            <img src="https://img.youtube.com/vi/wKCgLN5GJM0/maxresdefault.jpg" alt="THESE DAYS - Keljey ft jordanflowsmuzik">
+                            <div class="play-overlay">▶</div>
+                        </div>
                         <div class="music-info">
                             <h4>THESE DAYS</h4>
                             <p class="artist">Keljey ft @jordanflowsmuzik</p>
                             <a href="https://youtu.be/wKCgLN5GJM0?si=tSAGQvgSlFEGB8lJ" target="_blank" rel="noopener noreferrer" class="music-link">Watch →</a>
                         </div>
                     </div>
+
+                    <!-- RACE -->
                     <div class="music-item">
+                        <div class="music-artwork">
+                            <img src="https://img.youtube.com/vi/RRFUtdnwHwE/maxresdefault.jpg" alt="RACE - Keljey ft kelliyon">
+                            <div class="play-overlay">▶</div>
+                        </div>
                         <div class="music-info">
                             <h4>RACE</h4>
                             <p class="artist">Keljey ft @kelliyon <span class="collab-tag">🇨🇦 Canada</span></p>
                             <a href="https://youtu.be/RRFUtdnwHwE?si=IHpzbiN_f9sUp-VW" target="_blank" rel="noopener noreferrer" class="music-link">Watch →</a>
                         </div>
                     </div>
+
+                    <!-- ELEVATE -->
                     <div class="music-item">
+                        <div class="music-artwork">
+                            <img src="https://img.youtube.com/vi/uwgUDkV2Qpw/maxresdefault.jpg" alt="ELEVATE - Keljey ft Saj">
+                            <div class="play-overlay">▶</div>
+                        </div>
                         <div class="music-info">
                             <h4>ELEVATE</h4>
                             <p class="artist">Keljey ft Saj <span class="collab-tag">🇬🇭 Ghana</span></p>
                             <a href="https://youtu.be/uwgUDkV2Qpw?si=GgEwFOYXAkPeg0XF" target="_blank" rel="noopener noreferrer" class="music-link">Watch →</a>
                         </div>
                     </div>
+
+                    <!-- STRAIGHT TO THE POINT -->
                     <div class="music-item">
+                        <div class="music-artwork">
+                            <img src="https://img.youtube.com/vi/CgCWqntjNZQ/maxresdefault.jpg" alt="STRAIGHT TO THE POINT - Keljey ft tee j-6">
+                            <div class="play-overlay">▶</div>
+                        </div>
                         <div class="music-info">
                             <h4>STRAIGHT TO THE POINT</h4>
                             <p class="artist">Keljey ft @tee j-6</p>
@@ -291,7 +367,7 @@
                 </div>
                 <div class="two-six-artwork">
                     <div class="artwork-frame">
-                       <img src="assets/images/two-six-cover.png" alt="Two Six Mixtape" style="width:100%;height:100%;object-fit:cover;">
+                        <img src="assets/images/two-six-cover.png" alt="Two Six Mixtape" style="width:100%;height:100%;object-fit:cover;">
                     </div>
                 </div>
             </div>
@@ -316,10 +392,7 @@
                 </div>
                 <div class="story-visual">
                     <div class="photo-placeholder">
-                        <div class="keljey-photo-frame">
-                            <span class="photo-label">Kelvin & James</span>
-                            <img src="assets/images/keljey-photo.jpg" alt="Kelvin and James" style="width:100%;height:100%;object-fit:cover;">
-                        </div>
+                        <img src="assets/images/keljey-photo.jpg" alt="Kelvin and James" style="width:100%;height:100%;object-fit:cover;border-radius:4px;">
                     </div>
                 </div>
             </div>
@@ -367,22 +440,17 @@
                     <p><a href="mailto:keljeymusiq@gmail.com">keljeymusiq@gmail.com</a></p>
                 </div>
                 <div class="contact-item">
-    <h4>Keljey</h4>
-    <p><a href="mailto:keljeymusiq@gmail.com">keljeymusiq@gmail.com</a></p>
-</div>
-<div class="contact-item">
-    <h4>Phone</h4>
-    <p><a href="tel:+254768708832">+254 768 708 832</a></p>
-</div>
+                    <h4>Phone</h4>
+                    <p><a href="tel:+254768708832">+254 768 708 832</a></p>
+                </div>
             </div>
             <div class="social-links">
                 <h4>Follow</h4>
-               <div class="social-icons">
-    <a href="https://www.instagram.com/thatskel.vin/" target="_blank" rel="noopener noreferrer" class="social-link">📷 Instagram</a>
-    <a href="https://www.tiktok.com/@thats.qev" target="_blank" rel="noopener noreferrer" class="social-link">🎵 TikTok</a>
-    <a href="https://open.spotify.com/user/31t4b2hhym73a2p3l3dk6mwz7pqy?si=csrkhRo4QNKHWuQ-JqtWig&utm_source=copy-link&sci=spotify%3Acard-config%3A1YLqxz0eMCJPyMFXOQYWRt" target="_blank" rel="noopener noreferrer" class="social-link">🎧 Qev Spotify</a>
-    <a href="https://open.spotify.com/user/31zf2dnjdur3dxlmayx4bv7hxifm?si=jD9JM-vZSHWtCsPQbfMREA&utm_source=copy-link&sci=spotify%3Acard-config%3A4ebHCChSU5n32jsujFdjGa" target="_blank" rel="noopener noreferrer" class="social-link">🎧 Keljey Spotify</a>
-</div>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/thatskel.vin/" target="_blank" rel="noopener noreferrer" class="social-link">📷 Instagram</a>
+                    <a href="https://www.tiktok.com/@thats.qev" target="_blank" rel="noopener noreferrer" class="social-link">🎵 TikTok</a>
+                    <a href="https://open.spotify.com/user/31t4b2hhym73a2p3l3dk6mwz7pqy?si=csrkhRo4QNKHWuQ-JqtWig&utm_source=copy-link&sci=spotify%3Acard-config%3A1YLqxz0eMCJPyMFXOQYWRt" target="_blank" rel="noopener noreferrer" class="social-link">🎧 Qev Spotify</a>
+                    <a href="https://open.spotify.com/user/31zf2dnjdur3dxlmayx4bv7hxifm?si=jD9JM-vZSHWtCsPQbfMREA&utm_source=copy-link&sci=spotify%3Acard-config%3A4ebHCChSU5n32jsujFdjGa" target="_blank" rel="noopener noreferrer" class="social-link">🎧 Keljey Spotify</a>
                 </div>
             </div>
         </div>
@@ -392,7 +460,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">
-                    <span class="logo-placeholder">KELJEY<span class="accent">MUSIC</span></span>
+                    <img src="assets/images/keljey-logo.jpg" alt="Keljey Music" style="height:40px;margin-bottom:10px;">
                     <p>Storytelling through rap. Building an empire.</p>
                 </div>
                 <div class="footer-links">
