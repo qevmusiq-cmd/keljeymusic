@@ -42,7 +42,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Oswald:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-        /* YouTube thumbnail styles for Qev page */
         .qev-music-item .qev-artwork {
             position: relative;
             overflow: hidden;
@@ -109,6 +108,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+            display: block;
         }
         .qev-two-six-art .album-overlay {
             position: absolute;
@@ -150,6 +150,7 @@
             padding: 3px 10px;
             font-weight: 600;
             background: rgba(0,0,0,0.5);
+            border-radius: 2px;
         }
     </style>
 </head>
@@ -158,7 +159,7 @@
         <div class="nav-container">
             <div class="nav-logo">
                 <a href="/" aria-label="Keljey Music Home">
-                    <img src="../assets/images/keljey-logo.jpg" alt="Keljey Music" style="height:40px;">
+                    <img src="../assets/images/1000023538.jpg" alt="Keljey Music" style="height:45px;max-width:200px;object-fit:contain;">
                 </a>
             </div>
             <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
@@ -179,7 +180,7 @@
         <div class="qev-hero-content">
             <div class="qev-hero-text">
                 <span class="qev-badge">Official Artist Page</span>
-                <img src="../assets/images/qev-logo.png" alt="Qev Logo" style="height:60px;margin-bottom:10px;">
+                <img src="../assets/images/1000365258.png" alt="Qev Logo" style="height:60px;margin-bottom:10px;max-width:200px;object-fit:contain;">
                 <h1>Qev</h1>
                 <p class="qev-tagline">Kenyan Rapper • Storyteller • Keljey</p>
                 <div class="qev-hero-cta">
@@ -188,8 +189,8 @@
                 </div>
             </div>
             <div class="qev-hero-image">
-                <div class="qev-photo-frame">
-                    <img src="../assets/images/qev-photo.jpg" alt="Qev" style="width:100%;height:100%;object-fit:cover;">
+                <div class="qev-photo-frame" style="overflow:hidden;border-radius:4px;">
+                    <img src="../assets/images/1000292805.jpg" alt="Qev" style="width:100%;height:100%;object-fit:cover;display:block;">
                 </div>
             </div>
         </div>
@@ -235,25 +236,39 @@
             </div>
             <div class="qev-music-grid">
 
-                <!-- HIGHLIGHT -->
+                <!-- WAR SEASON (NEWEST) -->
                 <div class="qev-music-item featured">
                     <div class="qev-artwork">
-                        <img src="https://img.youtube.com/vi/hDiC22xN50c/maxresdefault.jpg" alt="HIGHLIGHT - Qev">
+                        <img src="https://img.youtube.com/vi/y8o4rkkMbqg/0.jpg" alt="WAR SEASON - Qev">
                         <span class="qev-release-badge">Latest</span>
+                        <div class="qev-play-overlay">▶</div>
+                    </div>
+                    <div class="qev-music-info">
+                        <h3>WAR SEASON</h3>
+                        <p class="qev-meta">Qev</p>
+                        <p class="qev-note">Qev's latest solo release</p>
+                        <a href="https://youtu.be/y8o4rkkMbqg?si=Bnepzq2V4LXeXHEO" target="_blank" rel="noopener noreferrer" class="btn-watch">Watch on YouTube</a>
+                    </div>
+                </div>
+
+                <!-- HIGHLIGHT -->
+                <div class="qev-music-item">
+                    <div class="qev-artwork">
+                        <img src="https://img.youtube.com/vi/hDiC22xN50c/0.jpg" alt="HIGHLIGHT - Qev">
                         <div class="qev-play-overlay">▶</div>
                     </div>
                     <div class="qev-music-info">
                         <h3>HIGHLIGHT</h3>
                         <p class="qev-meta">Qev</p>
                         <p class="qev-producer">Prod. @yow_isim from Hood Music</p>
-                        <a href="https://youtu.be/hDiC22xN50c?si=8hSWCGb96acB3dKc" target="_blank" rel="noopener noreferrer" class="btn-watch">Watch on YouTube</a>
+                        <a href="https://youtu.be/hDiC22xN50c?si=8hSWCGb96acB3dKc" target="_blank" rel="noopener noreferrer" class="btn-watch-small">Watch →</a>
                     </div>
                 </div>
 
                 <!-- ENOUGH -->
                 <div class="qev-music-item">
                     <div class="qev-artwork">
-                        <img src="https://img.youtube.com/vi/WmF27F7JRmg/maxresdefault.jpg" alt="ENOUGH - Qev">
+                        <img src="https://img.youtube.com/vi/WmF27F7JRmg/0.jpg" alt="ENOUGH - Qev">
                         <div class="qev-play-overlay">▶</div>
                     </div>
                     <div class="qev-music-info">
@@ -267,7 +282,7 @@
                 <!-- NO 2MORROW -->
                 <div class="qev-music-item">
                     <div class="qev-artwork">
-                        <img src="https://img.youtube.com/vi/-MJWJr7Y9s0/maxresdefault.jpg" alt="NO 2MORROW - Qev ft n-capital">
+                        <img src="https://img.youtube.com/vi/-MJWJr7Y9s0/0.jpg" alt="NO 2MORROW - Qev ft n-capital">
                         <div class="qev-play-overlay">▶</div>
                     </div>
                     <div class="qev-music-info">
@@ -281,7 +296,7 @@
                 <!-- KATA SIM -->
                 <div class="qev-music-item">
                     <div class="qev-artwork">
-                        <img src="https://img.youtube.com/vi/oUHe5lksZMc/maxresdefault.jpg" alt="KATA SIM - Qev ft BLACKZ D3PP">
+                        <img src="https://img.youtube.com/vi/oUHe5lksZMc/0.jpg" alt="KATA SIM - Qev ft BLACKZ D3PP">
                         <div class="qev-play-overlay">▶</div>
                     </div>
                     <div class="qev-music-info">
@@ -317,9 +332,9 @@
                     </div>
                 </div>
                 <div class="two-six-artwork">
-                    <div class="artwork-frame">
+                    <div class="artwork-frame" style="overflow:hidden;">
                         <div class="qev-two-six-art">
-                            <img src="../assets/images/two-six-cover.png" alt="Two Six Mixtape">
+                            <img src="../assets/images/1000455770.png" alt="Two Six Mixtape">
                             <div class="album-overlay">
                                 <div class="album-label">TWO SIX</div>
                                 <div class="album-artist">Qev</div>
@@ -390,7 +405,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">
-                    <img src="../assets/images/keljey-logo.jpg" alt="Keljey Music" style="height:40px;margin-bottom:10px;">
+                    <img src="../assets/images/1000023538.jpg" alt="Keljey Music" style="height:45px;max-width:200px;object-fit:contain;margin-bottom:10px;">
                     <p>Storytelling through rap. Building an empire.</p>
                 </div>
                 <div class="footer-links">
