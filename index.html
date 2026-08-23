@@ -42,16 +42,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Oswald:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-        /* Additional style for YouTube thumbnails */
+        .music-artwork {
+            position: relative;
+            overflow: hidden;
+            aspect-ratio: 1;
+            background: var(--dark-gray);
+            border-radius: 4px;
+        }
         .music-artwork img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             display: block;
-        }
-        .music-artwork {
-            position: relative;
-            overflow: hidden;
         }
         .music-artwork .play-overlay {
             position: absolute;
@@ -68,6 +70,54 @@
         .music-item:hover .play-overlay {
             opacity: 1;
         }
+        .music-item .tag-on-image {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background: rgba(0,0,0,0.7);
+            color: #fff;
+            padding: 2px 10px;
+            font-size: 0.55rem;
+            border-radius: 2px;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+        }
+        .music-artwork .badge {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            font-size: 0.55rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            padding: 4px 12px;
+            font-weight: 700;
+            border-radius: 2px;
+        }
+        .badge-new { background: var(--accent); color: var(--black); }
+        .badge-popular { background: var(--gold); color: var(--black); }
+        .badge-historic { background: var(--light-gray); color: var(--black); }
+        .video-thumbnail {
+            position: relative;
+            aspect-ratio: 16/9;
+            overflow: hidden;
+            background: var(--dark-gray);
+        }
+        .video-thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .video-thumbnail .play-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 3rem;
+            color: white;
+            opacity: 0.8;
+            text-shadow: 0 0 20px rgba(0,0,0,0.8);
+        }
     </style>
 </head>
 <body>
@@ -75,7 +125,7 @@
         <div class="nav-container">
             <div class="nav-logo">
                 <a href="/" aria-label="Keljey Music Home">
-                    <img src="assets/images/keljey-logo.jpg" alt="Keljey Music" style="height:40px;">
+                    <img src="assets/images/1000023538.jpg" alt="Keljey Music" style="height:45px;max-width:200px;object-fit:contain;">
                 </a>
             </div>
             <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
@@ -136,9 +186,9 @@
                 <div class="qev-highlight">
                     <div class="latest-release-badge">Latest Release</div>
                     <div class="release-card">
-                        <div class="release-title">HIGHLIGHT</div>
+                        <div class="release-title">WAR SEASON</div>
                         <div class="release-artist">Qev</div>
-                        <a href="https://youtu.be/hDiC22xN50c?si=8hSWCGb96acB3dKc" target="_blank" rel="noopener noreferrer" class="btn-watch">Watch on YouTube →</a>
+                        <a href="https://youtu.be/y8o4rkkMbqg?si=Bnepzq2V4LXeXHEO" target="_blank" rel="noopener noreferrer" class="btn-watch">Watch on YouTube →</a>
                     </div>
                 </div>
             </div>
@@ -158,11 +208,25 @@
                 <h3 class="music-category">Qev Solo</h3>
                 <div class="music-grid">
 
-                    <!-- HIGHLIGHT -->
+                    <!-- WAR SEASON (NEWEST) -->
                     <div class="music-item featured">
                         <div class="music-artwork">
-                            <img src="https://img.youtube.com/vi/hDiC22xN50c/maxresdefault.jpg" alt="HIGHLIGHT - Qev">
-                            <span class="new-badge">NEW</span>
+                            <img src="https://img.youtube.com/vi/y8o4rkkMbqg/0.jpg" alt="WAR SEASON - Qev">
+                            <span class="badge badge-new">NEW</span>
+                            <div class="play-overlay">▶</div>
+                        </div>
+                        <div class="music-info">
+                            <h4>WAR SEASON</h4>
+                            <p class="artist">Qev</p>
+                            <p class="note">Qev's latest solo release</p>
+                            <a href="https://youtu.be/y8o4rkkMbqg?si=Bnepzq2V4LXeXHEO" target="_blank" rel="noopener noreferrer" class="music-link">Watch →</a>
+                        </div>
+                    </div>
+
+                    <!-- HIGHLIGHT -->
+                    <div class="music-item">
+                        <div class="music-artwork">
+                            <img src="https://img.youtube.com/vi/hDiC22xN50c/0.jpg" alt="HIGHLIGHT - Qev">
                             <div class="play-overlay">▶</div>
                         </div>
                         <div class="music-info">
@@ -176,7 +240,7 @@
                     <!-- ENOUGH -->
                     <div class="music-item">
                         <div class="music-artwork">
-                            <img src="https://img.youtube.com/vi/WmF27F7JRmg/maxresdefault.jpg" alt="ENOUGH - Qev">
+                            <img src="https://img.youtube.com/vi/WmF27F7JRmg/0.jpg" alt="ENOUGH - Qev">
                             <div class="play-overlay">▶</div>
                         </div>
                         <div class="music-info">
@@ -190,7 +254,7 @@
                     <!-- NO 2MORROW -->
                     <div class="music-item">
                         <div class="music-artwork">
-                            <img src="https://img.youtube.com/vi/-MJWJr7Y9s0/maxresdefault.jpg" alt="NO 2MORROW - Qev ft n-capital">
+                            <img src="https://img.youtube.com/vi/-MJWJr7Y9s0/0.jpg" alt="NO 2MORROW - Qev ft n-capital">
                             <div class="play-overlay">▶</div>
                         </div>
                         <div class="music-info">
@@ -203,7 +267,7 @@
                     <!-- KATA SIM -->
                     <div class="music-item">
                         <div class="music-artwork">
-                            <img src="https://img.youtube.com/vi/oUHe5lksZMc/maxresdefault.jpg" alt="KATA SIM - Qev ft BLACKZ D3PP">
+                            <img src="https://img.youtube.com/vi/oUHe5lksZMc/0.jpg" alt="KATA SIM - Qev ft BLACKZ D3PP">
                             <div class="play-overlay">▶</div>
                         </div>
                         <div class="music-info">
@@ -220,11 +284,10 @@
                 <h3 class="music-category">Keljey Duo</h3>
                 <div class="music-grid">
 
-                    <!-- FOR THE CRITIQUES -->
                     <div class="music-item">
                         <div class="music-artwork">
-                            <img src="https://img.youtube.com/vi/1_OsVxKasPo/maxresdefault.jpg" alt="FOR THE CRITIQUES - Keljey">
-                            <span class="tag" style="position:absolute;top:12px;left:12px;background:rgba(0,0,0,0.7);color:#fff;padding:2px 10px;font-size:0.55rem;border-radius:2px;">Lyrical Video</span>
+                            <img src="https://img.youtube.com/vi/1_OsVxKasPo/0.jpg" alt="FOR THE CRITIQUES - Keljey">
+                            <span class="tag-on-image">Lyrical Video</span>
                             <div class="play-overlay">▶</div>
                         </div>
                         <div class="music-info">
@@ -234,11 +297,10 @@
                         </div>
                     </div>
 
-                    <!-- MBOGI INA DOH -->
                     <div class="music-item popular">
                         <div class="music-artwork">
-                            <img src="https://img.youtube.com/vi/3hCjMI9VdQI/maxresdefault.jpg" alt="MBOGI INA DOH - Keljey">
-                            <span class="popular-badge">Popular</span>
+                            <img src="https://img.youtube.com/vi/3hCjMI9VdQI/0.jpg" alt="MBOGI INA DOH - Keljey">
+                            <span class="badge badge-popular">Popular</span>
                             <div class="play-overlay">▶</div>
                         </div>
                         <div class="music-info">
@@ -249,11 +311,10 @@
                         </div>
                     </div>
 
-                    <!-- CROSS THE LINE -->
                     <div class="music-item">
                         <div class="music-artwork">
-                            <img src="https://img.youtube.com/vi/bw0OYoYA_bQ/maxresdefault.jpg" alt="CROSS THE LINE - Keljey">
-                            <span class="tag" style="position:absolute;top:12px;left:12px;background:rgba(0,0,0,0.7);color:#fff;padding:2px 10px;font-size:0.55rem;border-radius:2px;">Visualizer</span>
+                            <img src="https://img.youtube.com/vi/bw0OYoYA_bQ/0.jpg" alt="CROSS THE LINE - Keljey">
+                            <span class="tag-on-image">Visualizer</span>
                             <div class="play-overlay">▶</div>
                         </div>
                         <div class="music-info">
@@ -263,11 +324,10 @@
                         </div>
                     </div>
 
-                    <!-- MARY JANE -->
                     <div class="music-item historic">
                         <div class="music-artwork">
-                            <img src="https://img.youtube.com/vi/AHFCEgtGrIw/maxresdefault.jpg" alt="MARY JANE - Keljey ft jordan">
-                            <span class="historic-badge">First Release</span>
+                            <img src="https://img.youtube.com/vi/AHFCEgtGrIw/0.jpg" alt="MARY JANE - Keljey ft jordan">
+                            <span class="badge badge-historic">First Release</span>
                             <div class="play-overlay">▶</div>
                         </div>
                         <div class="music-info">
@@ -285,10 +345,9 @@
                 <h3 class="music-category">Keljey Collaborations</h3>
                 <div class="music-grid">
 
-                    <!-- THESE DAYS -->
                     <div class="music-item">
                         <div class="music-artwork">
-                            <img src="https://img.youtube.com/vi/wKCgLN5GJM0/maxresdefault.jpg" alt="THESE DAYS - Keljey ft jordanflowsmuzik">
+                            <img src="https://img.youtube.com/vi/wKCgLN5GJM0/0.jpg" alt="THESE DAYS - Keljey ft jordanflowsmuzik">
                             <div class="play-overlay">▶</div>
                         </div>
                         <div class="music-info">
@@ -298,10 +357,9 @@
                         </div>
                     </div>
 
-                    <!-- RACE -->
                     <div class="music-item">
                         <div class="music-artwork">
-                            <img src="https://img.youtube.com/vi/RRFUtdnwHwE/maxresdefault.jpg" alt="RACE - Keljey ft kelliyon">
+                            <img src="https://img.youtube.com/vi/RRFUtdnwHwE/0.jpg" alt="RACE - Keljey ft kelliyon">
                             <div class="play-overlay">▶</div>
                         </div>
                         <div class="music-info">
@@ -311,10 +369,9 @@
                         </div>
                     </div>
 
-                    <!-- ELEVATE -->
                     <div class="music-item">
                         <div class="music-artwork">
-                            <img src="https://img.youtube.com/vi/uwgUDkV2Qpw/maxresdefault.jpg" alt="ELEVATE - Keljey ft Saj">
+                            <img src="https://img.youtube.com/vi/uwgUDkV2Qpw/0.jpg" alt="ELEVATE - Keljey ft Saj">
                             <div class="play-overlay">▶</div>
                         </div>
                         <div class="music-info">
@@ -324,10 +381,9 @@
                         </div>
                     </div>
 
-                    <!-- STRAIGHT TO THE POINT -->
                     <div class="music-item">
                         <div class="music-artwork">
-                            <img src="https://img.youtube.com/vi/CgCWqntjNZQ/maxresdefault.jpg" alt="STRAIGHT TO THE POINT - Keljey ft tee j-6">
+                            <img src="https://img.youtube.com/vi/CgCWqntjNZQ/0.jpg" alt="STRAIGHT TO THE POINT - Keljey ft tee j-6">
                             <div class="play-overlay">▶</div>
                         </div>
                         <div class="music-info">
@@ -367,7 +423,7 @@
                 </div>
                 <div class="two-six-artwork">
                     <div class="artwork-frame">
-                        <img src="assets/images/two-six-cover.png" alt="Two Six Mixtape" style="width:100%;height:100%;object-fit:cover;">
+                        <img src="assets/images/1000455770.png" alt="Two Six Mixtape" style="width:100%;height:100%;object-fit:cover;display:block;">
                     </div>
                 </div>
             </div>
@@ -391,8 +447,8 @@
                     </div>
                 </div>
                 <div class="story-visual">
-                    <div class="photo-placeholder">
-                        <img src="assets/images/keljey-photo.jpg" alt="Kelvin and James" style="width:100%;height:100%;object-fit:cover;border-radius:4px;">
+                    <div class="photo-placeholder" style="overflow:hidden;border-radius:4px;">
+                        <img src="assets/images/1000032856.jpg" alt="Kelvin and James" style="width:100%;height:100%;object-fit:cover;display:block;">
                     </div>
                 </div>
             </div>
@@ -409,6 +465,7 @@
             <div class="video-grid">
                 <div class="video-card featured-video">
                     <div class="video-thumbnail">
+                        <img src="https://img.youtube.com/vi/J2DoXWEp1kQ/0.jpg" alt="STREETBARZ 2 Cypher">
                         <div class="play-icon">▶</div>
                         <span class="video-type">Cypher</span>
                     </div>
@@ -460,7 +517,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">
-                    <img src="assets/images/keljey-logo.jpg" alt="Keljey Music" style="height:40px;margin-bottom:10px;">
+                    <img src="assets/images/1000023538.jpg" alt="Keljey Music" style="height:45px;max-width:200px;object-fit:contain;margin-bottom:10px;">
                     <p>Storytelling through rap. Building an empire.</p>
                 </div>
                 <div class="footer-links">
@@ -480,4 +537,4 @@
 
     <script src="js/main.js"></script>
 </body>
-</html>
+    </html>
