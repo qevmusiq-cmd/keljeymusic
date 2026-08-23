@@ -118,6 +118,29 @@
             opacity: 0.8;
             text-shadow: 0 0 20px rgba(0,0,0,0.8);
         }
+        .logo-image {
+            height: 45px;
+            max-width: 200px;
+            object-fit: contain;
+        }
+        .footer-logo {
+            height: 45px;
+            max-width: 200px;
+            object-fit: contain;
+            margin-bottom: 10px;
+        }
+        .photo-fit {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .artwork-cover {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
     </style>
 </head>
 <body>
@@ -125,7 +148,7 @@
         <div class="nav-container">
             <div class="nav-logo">
                 <a href="/" aria-label="Keljey Music Home">
-                    <img src="assets/images/1000023538.jpg" alt="Keljey Music" style="height:45px;max-width:200px;object-fit:contain;">
+                    <img src="assets/images/1000023538.jpg" alt="Keljey Music" class="logo-image">
                 </a>
             </div>
             <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
@@ -208,7 +231,6 @@
                 <h3 class="music-category">Qev Solo</h3>
                 <div class="music-grid">
 
-                    <!-- WAR SEASON (NEWEST) -->
                     <div class="music-item featured">
                         <div class="music-artwork">
                             <img src="https://img.youtube.com/vi/y8o4rkkMbqg/0.jpg" alt="WAR SEASON - Qev">
@@ -223,7 +245,6 @@
                         </div>
                     </div>
 
-                    <!-- HIGHLIGHT -->
                     <div class="music-item">
                         <div class="music-artwork">
                             <img src="https://img.youtube.com/vi/hDiC22xN50c/0.jpg" alt="HIGHLIGHT - Qev">
@@ -237,7 +258,6 @@
                         </div>
                     </div>
 
-                    <!-- ENOUGH -->
                     <div class="music-item">
                         <div class="music-artwork">
                             <img src="https://img.youtube.com/vi/WmF27F7JRmg/0.jpg" alt="ENOUGH - Qev">
@@ -251,7 +271,6 @@
                         </div>
                     </div>
 
-                    <!-- NO 2MORROW -->
                     <div class="music-item">
                         <div class="music-artwork">
                             <img src="https://img.youtube.com/vi/-MJWJr7Y9s0/0.jpg" alt="NO 2MORROW - Qev ft n-capital">
@@ -264,7 +283,6 @@
                         </div>
                     </div>
 
-                    <!-- KATA SIM -->
                     <div class="music-item">
                         <div class="music-artwork">
                             <img src="https://img.youtube.com/vi/oUHe5lksZMc/0.jpg" alt="KATA SIM - Qev ft BLACKZ D3PP">
@@ -423,7 +441,7 @@
                 </div>
                 <div class="two-six-artwork">
                     <div class="artwork-frame">
-                        <img src="assets/images/1000455770.png" alt="Two Six Mixtape" style="width:100%;height:100%;object-fit:cover;display:block;">
+                        <img src="assets/images/1000455770.png" alt="Two Six Mixtape" class="artwork-cover">
                     </div>
                 </div>
             </div>
@@ -448,7 +466,7 @@
                 </div>
                 <div class="story-visual">
                     <div class="photo-placeholder" style="overflow:hidden;border-radius:4px;">
-                        <img src="assets/images/1000032856.jpg" alt="Kelvin and James" style="width:100%;height:100%;object-fit:cover;display:block;">
+                        <img src="assets/images/1000032856.jpg" alt="Kelvin and James" class="photo-fit">
                     </div>
                 </div>
             </div>
@@ -517,7 +535,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">
-                    <img src="assets/images/1000023538.jpg" alt="Keljey Music" style="height:45px;max-width:200px;object-fit:contain;margin-bottom:10px;">
+                    <img src="assets/images/1000023538.jpg" alt="Keljey Music" class="footer-logo">
                     <p>Storytelling through rap. Building an empire.</p>
                 </div>
                 <div class="footer-links">
@@ -537,4 +555,4 @@
 
     <script src="js/main.js"></script>
 </body>
-    </html>
+</html>
